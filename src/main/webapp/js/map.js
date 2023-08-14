@@ -20,10 +20,10 @@ function init(){
 
 	mapView =  new ol.View({ //뷰 생성
 			projection : 'EPSG:3857', //좌표계 설정 (EPSG:3857은 구글에서 사용하는 좌표계) 
-			center : new ol.geom.Point([ 126.878709, 37.482922 ]) //처음 중앙에 보여질 경도, 위도 
+			center : new ol.geom.Point([ 126.9918, 37.5517 ]) //처음 중앙에 보여질 경도, 위도 
 					.transform('EPSG:4326', 'EPSG:3857') //GPS 좌표계 -> 구글 좌표계
 					.getCoordinates(), //포인트의 좌표를 리턴함
-			zoom : 16 //초기지도 zoom의 정도값
+			zoom : 12 //초기지도 zoom의 정도값
 	     });
 
 	map = new ol.Map({ //맵 생성	
@@ -75,8 +75,7 @@ function init(){
  		if(ff == true){ //있으면 openPopup() 실행
  			openPopup();
  		}
-	});
-	
+	});	
 }
 
 function openPopup(){ //팝업창 오픈
@@ -118,7 +117,6 @@ function addMarker(lon, lat, name){ //경도 위도 이름값(마커들을 구�
 
 $(document).ready(function() {
 	init();
-	console.log('aa');
-	addMarker(126.878709, 37.482922, 'apeak');
-
+	addMarker(126.8785, 37.483, 'apeak');
+	addMarker(127.0408, 37.5017, 'catalonix');
 });

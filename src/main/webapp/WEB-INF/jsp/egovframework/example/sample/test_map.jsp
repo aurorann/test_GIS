@@ -36,7 +36,7 @@
 	
 	<style>
 	 .vMap { 
-	 	height: 500px; 
+	 	height: 700px; 
 	 	width: 100%; 
 	 } 
 	 .__float-tbl{
